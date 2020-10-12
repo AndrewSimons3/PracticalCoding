@@ -1,6 +1,3 @@
-
-
-
 var todoList = {
   todos: [],
   displayTodos: function() {
@@ -64,13 +61,11 @@ var todoList = {
   }
 };
 
-var displayTodosButton = document.getElementById('displayTodosButton')
-var toggleAllButton = document.getElementById('toggleAllButton')
-
-displayTodosButton.addEventListener('click', function() {
-  todoList.displayTodos();
-});
-
-toggleAllbutton.addEventListener('click', function() {
-  todoList.toggleAll();
-});
+var handlers = {
+  displayTodos: function() {
+    todoList.displayTodos();
+  },
+  toggleAll: function() {
+    todoList.toggleAll();
+  }
+};
