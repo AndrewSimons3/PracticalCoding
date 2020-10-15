@@ -98,6 +98,7 @@ let view = {
     todosUl.innerHTML = '';
     for (var i = 0; i < todoList.todos.length; i++) {
       let todoLi = document.createElement('li');
+      todoLi.textContent = todoList.todos[i].todoText;
       todosUl.appendChild(todoLi)
     }
   }
