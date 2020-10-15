@@ -90,4 +90,15 @@ var handlers = {
   toggleAll: function() {
     todoList.toggleAll();
   }
-}
+};
+
+let view = {
+  displayTodos: function() {
+    for (var i = 0; i < todoList.todos.length; i++) {
+      let todosUl = document.querySelector('ul');
+      let todoLi = document.createElement('li');
+      todosUl.appendChild(todoLi)
+
+    }
+  }
+};
