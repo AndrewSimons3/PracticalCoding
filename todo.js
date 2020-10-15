@@ -94,11 +94,11 @@ var handlers = {
 
 let view = {
   displayTodos: function() {
+    let todosUl = document.querySelector('ul');
+    todosUl.innerHTML = '';
     for (var i = 0; i < todoList.todos.length; i++) {
-      let todosUl = document.querySelector('ul');
       let todoLi = document.createElement('li');
       todosUl.appendChild(todoLi)
-
     }
   }
 };
