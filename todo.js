@@ -98,7 +98,16 @@ let view = {
     todosUl.innerHTML = '';
     for (var i = 0; i < todoList.todos.length; i++) {
       let todoLi = document.createElement('li');
-      todoLi.textContent = todoList.todos[i].todoText;
+      let todo = todoList.todos[i];
+      let todoTextWithCompletion = '';
+
+      if(todo.completed === true) {
+        todoTextWithCompletion = '(x)' + todo.todoText;
+      } else {
+        todoTextWithCompletion = '( )' + todo.todoText;
+      }
+
+      todoLi.textContent = todoTextWithCompletion;
       todosUl.appendChild(todoLi)
     }
   }
