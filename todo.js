@@ -34,17 +34,25 @@ var todoList = {
       }
     });
 
-    //If everything's true, make everything false.
-    if(completedTodos === totalTodos) {
+    // //If everything's true, make everything false.
+    // if(completedTodos === totalTodos) {
+    // this.todos.forEach(function(todo) {
+    //   todo.completed = false;
+    // });
+    //   // Case 2: Otherwise, make everything true.
+    // } else {
+    // this.todos.forEach(function(todo) {
+    //   todo.completed = true;
+    // });
+    // }
+
     this.todos.forEach(function(todo) {
-      todo.completed = false;
+      if (completedTodos === totalTodos) {
+        todo.completed = false;
+      } else {
+        todo.completed = true;
+      }
     });
-      // Case 2: Otherwise, make everything true.
-    } else {
-    this.todos.forEach(function(todo) {
-      todo.completed = true;
-    });
-    }
   }
 };
 
