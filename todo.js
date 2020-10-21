@@ -36,14 +36,14 @@ var todoList = {
 
     //If everything's true, make everything false.
     if(completedTodos === totalTodos) {
-      for(let i = 0; i < totalTodos; i++) {
-        this.todos[i].completed = false;
-      }
+    this.todos.forEach(function(todo) {
+      todo.completed = false;
+    });
       // Case 2: Otherwise, make everything true.
     } else {
-      for (let i = 0; i < totalTodos; i++) {
-        this.todos[i].completed = true;
-      }
+    this.todos.forEach(function(todo) {
+      todo.completed = true;
+    });
     }
   }
 };
