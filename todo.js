@@ -22,33 +22,17 @@ var todoList = {
     let completedTodos = 0;
 
     // Get number of completed todos.
-    // for(let i = 0; i < totalTodos; i++) {
-    //   if (this.todos[i].completed === true) {
-    //     completedTodos++;
-    //   }
-    // }
-
     this.todos.forEach(function(todo) {
       if (todo.completed === true) {
         completedTodos++;
       }
     });
 
-    // //If everything's true, make everything false.
-    // if(completedTodos === totalTodos) {
-    // this.todos.forEach(function(todo) {
-    //   todo.completed = false;
-    // });
-    //   // Case 2: Otherwise, make everything true.
-    // } else {
-    // this.todos.forEach(function(todo) {
-    //   todo.completed = true;
-    // });
-    // }
-
     this.todos.forEach(function(todo) {
+      // Case 1: If everything's true, make everything false.
       if (completedTodos === totalTodos) {
         todo.completed = false;
+      // Case 2: Otherwise, make everything true.
       } else {
         todo.completed = true;
       }
